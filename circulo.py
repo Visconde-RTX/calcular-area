@@ -12,5 +12,5 @@ class Circulo:
         areaC = self.calcular_areaC()
         perimetroC = self.calcular_perimetroC()
 
-        print(f"A área do circulo é: {areaC}{und}")
+        print(f"\nA área do circulo é: {areaC}{und}")
         print(f"O perímetro do circulo é: {perimetroC}{und.replace('²','')}")

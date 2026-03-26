@@ -14,5 +14,5 @@ class Triangulo:
         areaT = self.calcular_areaT()
         perimetroT = self.calcular_perimetroT()
 
-        print(f"A área do triangulo é: {areaT}{und}")
-        print(f"O perímetro do triangulo é: {perimetroT}{und.replace('2','')}")
+        print(f"\nA área do triangulo é: {areaT}{und}")
+        print(f"O perímetro do triangulo é: {perimetroT}{und.replace('²','')}")
