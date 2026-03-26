@@ -1,14 +1,20 @@
 from retangulo import Retangulo
 from circulo import Circulo
 from triangulo import Triangulo
+from quadrado import Quadrado
 
 def main():
 
-    forma = int(input("1-Retangulo, 2-Circulo, 3-Triangulo: "))
+    while True:
+        forma = int(input("1-Retangulo, 2-Circulo, 3-Triangulo, 4-Quadrado: "))
+        if forma in [1,2,3,4]:
+            break
+        else:
+            print("Opção inválida")
 
     while True:
         und = int(input("1-Calcular em m², 2 - Calcular em cm²: "))
-        if und == 1 or und == 2:
+        if und in [1,2]:
             break
         else:
             print("Opção inválida")
@@ -21,31 +27,41 @@ def main():
         result = Retangulo(base, altura)
 
         if und == 1:
-            result.exibir_resultado("m²")
+                result.exibir_resultado("m²")
         elif und == 2:
-            result.exibir_resultado("cm²")
+                result.exibir_resultado("cm²")
 
-    if forma == 2:
-        raio = int(input("\nDigite o valor do raio (Diametro dividido por 2): "))
+    elif forma == 2:
+            raio = int(input("\nDigite o valor do raio (Diametro dividido por 2): "))
 
-        result = Circulo(raio)
+            result = Circulo(raio)
 
-        if und == 1:
-            result.exibir_resultadoC("m²")
-        elif und == 2:
-            result.exibir_resultadoC("cm²") 
+            if und == 1:
+                result.exibir_resultadoC("m²")
+            elif und == 2:
+                result.exibir_resultadoC("cm²") 
 
-    if forma == 3:
-        b = int(input("\nDigite o valor da base do triangulo: "))
-        h = int(input("Digite o valor da altura do triangulo: "))
-        lado3 = int(input("Digite o valor do terceiro lado do triangulo (sem ser a base ou altura): "))
+    elif forma == 3:
+            b = int(input("\nDigite o valor da base do triangulo: "))
+            h = int(input("Digite o valor da altura do triangulo: "))
+            lado3 = int(input("Digite o valor do terceiro lado do triangulo (sem ser a base ou altura): "))
 
-        result = Triangulo(b, h ,lado3)
+            result = Triangulo(b, h ,lado3)
 
-        if und == 1:
-            result.exibir_resultadoT("m²")
-        elif und == 2:
-            result.exibir_resultadoT("cm²")
+            if und == 1:
+                result.exibir_resultadoT("m²")
+            elif und == 2:
+                result.exibir_resultadoT("cm²")
+
+    elif forma == 4:
+            lado = int(input("\nDigite o valor do lado do quadrado: "))
+
+            result = Quadrado(lado)
+
+            if und == 1:
+                result.exibir_resultadoQ("m²")
+            elif und == 2:
+                result.exibir_resultadoQ("cm²")
 
 if __name__ ==  "__main__":
     main()
