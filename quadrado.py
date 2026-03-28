@@ -12,5 +12,5 @@ class Quadrado:
         areaQ = self.calcular_areaQ()
         perimetroQ = self.calcular_perimetroQ()
 
-        print(f"\nA área do quadrado é: {areaQ}{und}")
-        print(f"O perímetro do quadrado é: {perimetroQ}{und.replace('²','')}")
+        print(f"\nA área do quadrado é: {areaQ:.2f}{und}")
+        print(f"O perímetro do quadrado é: {perimetroQ:.2f}{und.replace('²','')}")
